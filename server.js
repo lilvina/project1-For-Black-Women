@@ -22,7 +22,11 @@ app.get('/', function(req, res) {
 });
 
 //connect to db called 
-mongoose.connect('mongodb://localhost/Blog');
+mongoose.connect(
+	process.env.MONGOLAB_URI ||
+	process.env.MONGOHQ_URL ||
+	'mongodb://localhost/Blog'
+);
 
 
 
