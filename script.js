@@ -1,36 +1,43 @@
 $(function(){
-	$('#new-post').submit(function(e){
-   e.preventDefault();
-   console.log("im submitting a form")
-   var blog = {
-     text: $('#post-text').val()
-   }
-   $.post('/api/blogs', blog, function(data) {
-     console.log(data)
-     $('#posts').prepend($blog(data))
-   })
+	
+	var $newPost = $('#new-post');
+
+	var $postText = $('#post-text');
+
+	var $results = $('#results');
+
+	var $topicsList = $('#topics-list');
+
+	var blogTemplate = _.template($('#blog-template').html());
+
+	// make the submit button to work
+	$newPost.on('submit', function(event){
+		console.log("Hi, I'm submitted!");
+		event.preventDefault();
+
+
+	})
+
+	var topics = [
+		{post: "Test 1,2,3"},
+		{post: "Let's go!"},
+		{post: "Yay!"}
+	];
+
+	_.each(topics, function (topic, index){
+		var $topic = $(blogTemplate(topic));
+		$topic.attr('data-index', index);
+		$topicsList.append($topic);
+	})
+
 });
 
-function simulateClick() {
- var event = new MouseEvent('click', {
-   'view': window,
-   'bubbles': true,
-   'cancelable': true
- });
- var cb = document.getElementById('checkbox'); 
- var canceled = !cb.dispatchEvent(event);
- if (canceled) {
-   // A handler called preventDefault.
-   alert("canceled");
- } else {
-   // None of the handlers called preventDefault.
-   alert("not canceled");
- }
-}
-
-var event = new CustomEvent('build', { 'detail': elem.dataset.time});
-
-function eventHandler(e) {
- log('The time is: ' + e.detail);
-}
+$.ajax({
+	type: 'GET',
+	url: '',
+	dataType: '',
+	success: function(data){
+		console.log(data);
+	}
+});
 

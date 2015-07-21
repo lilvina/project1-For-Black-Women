@@ -61,7 +61,8 @@
                     <button type="submit" class="btn btn-default">Sign In</button>
                 </form>
             </div>
-              <div class="wrapper">
+            <div id="results"></div>
+           <!--    <div class="wrapper">
                 <form class="form-signin">       
                   <h2 class="form-signin-heading">Please login</h2>
                   <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
@@ -71,7 +72,7 @@
                   </label>
                   <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>   
     </form>
-  </div>
+  </div> -->
         </center>
     </div>
 </div>
@@ -95,6 +96,13 @@
      </form>
    </div>
  </div>
+ <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div id="topics-list"></div>
+      </div>
+    </div>
+  </div>
 
      <!-- jquery -->
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -109,7 +117,7 @@
   <script type="text/template" id="blog-template">
     <div class="post">
       <p>
-        <%= post %> - <%= author %>
+        <%= post %> 
       </p>
       <hr>
     </div>
