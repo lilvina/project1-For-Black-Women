@@ -1,0 +1,19 @@
+body {
+	padding-top: 105px;
+	background: url(http://24.media.tumblr.com/06c792529f5e9c93d89fd01df27251a1/tumblr_n5uzvaT5dB1ql2ng0o1_500.jpg);
+	color: #E40DB4;
+	font-size: 30px;
+}
+.navbar-default 
+.navbar-brand {
+	color: red;
+	font-size: 20px;
+	font-style: oblique;
+}
+
+.form-control {
+	width: 80%;
+	height: 35px;
+	font-size: 16px;
+}
+

@@ -32,12 +32,14 @@ $(function(){
 
 });
 
-$.ajax({
-	type: 'GET',
-	url: '',
-	dataType: '',
-	success: function(data){
-		console.log(data);
-	}
-});
+// $.ajax({
+// 	url: 'ajax/index.html',
+// 	success: function(data){
+// 		alert('Hurray the AJAX call succeeded!');
+// 	},
+// 	error: function(xhr, error){
+// 		alert('Error time!');
+// 	}
+// });
+
 

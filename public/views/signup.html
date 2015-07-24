@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="For Black Women is about empowering black girls and women."/>
+  <title>For Black Women</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+  <!-- custom styles -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<!-- 
+	The method POST means create on the server
+	The action "/blogs" is synonymous with PATH or url
+ -->
+ <div class="container">
+	 <div class="row">
+	 	<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+			<form method="POST" action="/users">
+
+				<div class="form-group">
+					<input type="text" name="post[email]" class="form-control">
+				</div>
+
+				<div class="form-group">
+					<input type="password" name="post[password]" class="form-control">
+				</div>
+
+				<button>Sign Up</button>
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>
